@@ -14,7 +14,7 @@ for computing terms of the following sequences:
 * A373813 a(n) is the smallest number of straight lines needed to intersect all points (k, prime(k)) for k = 1..n.
 * Run lengths: A373814
 
-Approach is on representing lines as sets of points and solving the set cover problem with MILP.
+Approach is based on representing lines as sets of points and solving the set cover problem with MILP.
 '''
 
 # Select a MILP solver:
