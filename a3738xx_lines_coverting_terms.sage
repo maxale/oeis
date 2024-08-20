@@ -40,10 +40,8 @@ a373813 = lambda n: len( min_lines([(k, nth_prime(k)) for k in (1..n)]) )
 ######### Functions to extend sequences with many terms
 
 def a373811_grow(a0=[0,1,1,2], by_jumps=True):
-    if by_jumps:
-        return func_grow_by_jumps(lambda a: tuple(enumerate(a)), a0, 'A373811')
-    else:
-        return func_grow_by_one(lambda a: tuple(enumerate(a)), a0, 'A373811')
+    func = func_grow_by_jumps if by_jumps else func_grow_by_one
+    return func(lambda a: tuple(enumerate(a)), a0, 'A373811')
 
 def a375499_grow(a0=[0, 1, 1, 2, 2, 2, 3], by_jumps=True):
     func = func_grow_by_jumps if by_jumps else func_grow_by_one
