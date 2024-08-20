@@ -147,7 +147,7 @@ def func_grow_by_jumps(a_to_points, a, seq_id):
         if len(Lines)==a[-1]:
             # going up
             while len(Lines)==a[-1]:
-                print('going up',a)
+                # print('going up',a)
                 a.append( len(Lines) )
                 # check if the same lines cover the next term
                 while any( on_same_line(*(ln:=line)[:2],(pnt:=a_to_points(a)[-1])) for line in Lines ):
@@ -163,7 +163,7 @@ def func_grow_by_jumps(a_to_points, a, seq_id):
                 Lines = min_lines(a_to_points(a))
             assert len(Lines) == a[-1] + 1
             while True:
-                print('going down',a)
+                # print('going down',a)
                 Lines_ = min_lines(a_to_points(a[:-1]))
                 if len(Lines_)==a[-1]:
                     break
