@@ -1,6 +1,7 @@
-r'''
-SageMath code ver. 20240819 by Max Alekseyev
-for computing terms of the following sequences:
+# a3738xx_lines_covering_points.sage ver. 20240819 by Max Alekseyev
+
+__doc__ = r'''
+Compute terms of the following sequences:
 
 * A373811 a(0) = 0. For n > 0, a(n) is the smallest number of straight lines needed to intersect all points (k, a(k)) for k < n.
 * Run lengths: A373812
