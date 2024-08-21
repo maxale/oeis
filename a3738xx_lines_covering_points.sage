@@ -1,4 +1,4 @@
-# a3738xx_lines_covering_points.sage ver. 20240819 by Max Alekseyev
+# a3738xx_lines_covering_points.sage ver. 20240821 by Max Alekseyev
 
 __doc__ = r'''
 Compute terms of the following sequences:
@@ -117,7 +117,7 @@ def func_grow_by_one(a_to_points, a, seq_id):
         print(f'{seq_id}: {len(a)-1} {a[-1]}')
         print('Lines:', Lines)
         print()
-        while any( on_same_line( *line[:2], (len(a),a[-1]) ) for line in Lines ):
+        while any( on_same_line(*line[:2], a_to_points(a)[-1]) for line in Lines ):
             a.append( len(Lines) )
             print(f'{seq_id}: {len(a)-1} {a[-1]}')
             print('Lines: same')
